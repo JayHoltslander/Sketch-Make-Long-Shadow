@@ -8,4 +8,5 @@ Create long shadows quickly and easily.
 3. Select the source layer in the new group.
 4. Run the plugin.
 
+**Preview gif...**
 ![Make Long Shadows Plugin for Sketch](preview.gif)
