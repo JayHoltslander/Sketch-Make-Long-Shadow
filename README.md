@@ -5,10 +5,11 @@ Sketch Make Long Shadow
 
 Create long shadows quickly and easily.
 
-1. Make a copy of your shape's outline for the shadow's source.
-2. Group that new source layer. 
-3. Select the source layer in the new group.
-4. Run the plugin.
+1. Select a Shape layer and run the plugin.
+2. Set the distance and direction of the shadow.
+3. Hit `Make Shadow`
+
+_Note: The plugin only supports Shape Layers. So to create long shadows for Text Layers, be sure to Convert Text to Outlines (`⌘` + `Shift` + `O`)._
 
 **Preview gif...**
 

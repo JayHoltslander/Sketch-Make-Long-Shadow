@@ -1,0 +1,206 @@
+@import 'common.js'
+
+kPluginName = "Make Long Shadow"
+
+// Create presets so we can remember the user's 
+// selection next time the plugin is run
+
+var presets = {
+	shadowDistance: 80,
+	shadowDirection: "Bottom Right"
+}
+var userDefaults = initDefaults(presets)
+
+// All possible directions for the shadow
+
+var possibleDirections = [ "Bottom Right", "Bottom Left", "Top Right", "Top Left" ]
+
+
+function run() {
+	
+	// Check selection
+	if ([selection count] == 0) {
+		showDialog("Please select something")
+		return
+	}
+
+	// Ask for shadow details
+	
+	var alert = [COSAlertWindow new];
+	[alert setMessageText: kPluginName];
+
+	[alert addButtonWithTitle: 'Make Shadow'];
+	[alert addButtonWithTitle: 'Cancel'];
+
+	// Shadow Distance
+	
+	[alert addTextLabelWithValue: 'Distance'] // 0
+	[alert addTextFieldWithValue: userDefaults.shadowDistance] // 1
+
+	// Shadow Direction
+
+	[alert addTextLabelWithValue: 'Direction'] // 2
+	var indexOfLastSelectedDirection = possibleDirections.indexOf(userDefaults.shadowDirection+"")
+	if(indexOfLastSelectedDirection == -1) indexOfLastSelectedDirection = 0
+	var directionDropdown = createDropDown(possibleDirections, indexOfLastSelectedDirection, 140)
+	[alert addAccessoryView: directionDropdown] // 3
+
+	// Show config window and handle user's resposnse
+	
+	var response = [alert runModal]
+
+	// Response will be "1000" if user clicked the 'Make Shadow' button
+	
+	if (response == "1000") {
+
+		// Iterate through selected layers
+		
+		var loop = [selection objectEnumerator],
+			distance = parseInt([[alert viewAtIndex: 1] stringValue]),
+			direction = [directionDropdown titleOfSelectedItem],
+			xMultiplier = (direction == "Bottom Left" || direction == "Top Left") ? -1 : 1,
+			yMultiplier = (direction == "Top Left" || direction == "Top Right") ? -1 : 1,
+			unionAction = [[doc actionsController] actionWithName: "MSUnionAction"],
+			flattenAction = [[doc actionsController] actionWithName: "MSFlattenAction"],
+			groupAction = [[doc actionsController] actionWithName: "MSGroupAction"],
+			shadowColor = hexToMSColor("#000000", 0.8),
+			layer;
+
+		while (layer = [loop nextObject]) {
+			
+			// Only MSShapeGroups layers can be merged and flattened, 
+			// so run the following only on MSShapeGroup layers
+
+			if ([layer class] === MSShapeGroup) {
+
+				var i, duplicateLayer, layerOrigin, layerIndex, parentGroup;
+
+				// Clear selection
+
+				[[doc currentPage] deselectAllLayers]
+
+				// Get the original layer's frame and parent
+
+				layerOrigin = [[layer absoluteRect] origin]
+				parentGroup = [layer parentGroup]
+				
+
+				// Duplicate layer to make shadow
+				
+				for (i = 1; i < distance; i++) {
+					
+					if (duplicateLayer == nil) {
+						duplicateLayer = [layer duplicate]
+						clearLayerStyles(duplicateLayer)
+	        			[duplicateLayer select:true byExpandingSelection:false]
+
+	        			// Flatten the first duplicate layer so that we don't create unnecessary sub paths
+
+						if([duplicateLayer canFlatten]) {
+
+							if([flattenAction shouldWarnAboutFlattening]) {
+		        				
+								// Some shapes cannot be flattened (usually if their sub paths don't intersect)
+								// For those layers, we use the outline shape and ignore any Booleans
+
+								[parentGroup removeLayer:duplicateLayer]
+
+								var firstShape = [[layer layers] firstObject],
+									firstShapeFrame = [firstShape frame],
+									newShapePath = [MSShapePathLayer shapeWithShapePath:[firstShape path] inRect:[firstShapeFrame rect]];
+
+								duplicateLayer = [MSShapeGroup new];
+
+								[duplicateLayer addLayers:[newShapePath]]
+								[parentGroup removeLayer:duplicateLayer]
+								[parentGroup insertLayers:[duplicateLayer] afterLayer:layer]
+								[duplicateLayer resizeRoot:true]
+	        					[duplicateLayer select:true byExpandingSelection:false]
+
+		        			} else {
+
+								if ([flattenAction validate]) {
+									[flattenAction flattenIgnoringWarning]
+								}
+		        			}
+
+						}
+
+					} else {
+						duplicateLayer = [duplicateLayer duplicate]
+						[duplicateLayer select:true byExpandingSelection:true]
+					}
+					
+					// Position the duplicate layer 
+
+					[[duplicateLayer absoluteRect] setX: layerOrigin.x + (xMultiplier * i)];
+	        		[[duplicateLayer absoluteRect] setY: layerOrigin.y + (yMultiplier * i)];
+				}
+
+				// Merge all duplicates using Union
+
+				if ([unionAction validate]) {
+					[unionAction booleanUnion:nil] 
+				}
+
+				// Flatten the merged layer
+
+				if ([flattenAction validate]) {
+					[flattenAction flattenIgnoringWarning]
+				}
+
+				// Get newly created Shadow Layer
+
+				parentGroup = [layer parentGroup]
+				layerIndex = [parentGroup indexOfLayer:layer]
+				duplicateLayer = [parentGroup layerAtIndex:layerIndex+1]
+
+				// Clean the shadow shape (remove extra path points)
+
+				if(![duplicateLayer canFlatten]) {
+					cleanShapePath([[[duplicateLayer layers] array] firstObject], 1.05)
+				}
+
+				// Set shadow layer name and fill color
+
+				[duplicateLayer setName:[layer name] + " Shadow"]
+
+				[[[duplicateLayer style] fills] addNewStylePart];
+        		[[[duplicateLayer style] fill] setColor: shadowColor];
+
+				// Move artwork layer above shadow layer
+
+				[parentGroup removeLayer:layer]
+				[parentGroup insertLayers:[layer] afterLayer:duplicateLayer]
+
+				// Group artwork and shadow so they can be moved together
+
+				[[doc currentPage] deselectAllLayers]
+				[layer select:true byExpandingSelection:true]
+				[duplicateLayer select:true byExpandingSelection:true]
+
+				if ([groupAction validate]) {
+					[groupAction group:nil] 
+				}
+				[[[selection firstObject] parentGroup] setName:[layer name]]
+
+			}
+
+			// Clean up
+
+			duplicateLayer = nil
+
+		}
+
+		// Remember selected settings for next time
+
+		userDefaults.shadowDistance = distance
+		userDefaults.shadowDirection = direction
+		saveDefaults(userDefaults)
+
+	}
+
+}
+
+
+run()
