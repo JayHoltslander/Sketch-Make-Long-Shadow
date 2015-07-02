@@ -1,7 +1,7 @@
 Sketch Make Long Shadow
 ==========================
 
-Create long shadows quikly and easily.
+Create long shadows quickly and easily.
 
 1. Make a copy of your shape's outline for the shadow's source.
 2. Group that new source layer. 
