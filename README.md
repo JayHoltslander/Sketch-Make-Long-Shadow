@@ -9,4 +9,5 @@ Create long shadows quickly and easily.
 4. Run the plugin.
 
 **Preview gif...**
+
 ![Make Long Shadows Plugin for Sketch](preview.gif)
