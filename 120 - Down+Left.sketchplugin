@@ -1,0 +1,851 @@
+// Long Shadow - 80 Down & Right
+(function() {
+  for(var i=0; i < [selection length]; i++){
+    
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 1)]
+    [frame setY:([frame y] + 1)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 2)]
+    [frame setY:([frame y] + 2)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 3)]
+    [frame setY:([frame y] + 3)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 4)]
+    [frame setY:([frame y] + 4)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 5)]
+    [frame setY:([frame y] + 5)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 6)]
+    [frame setY:([frame y] + 6)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 7)]
+    [frame setY:([frame y] + 7)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 8)]
+    [frame setY:([frame y] + 8)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 9)]
+    [frame setY:([frame y] + 9)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 10)]
+    [frame setY:([frame y] + 10)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 11)]
+    [frame setY:([frame y] + 11)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 12)]
+    [frame setY:([frame y] + 12)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 13)]
+    [frame setY:([frame y] + 13)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 14)]
+    [frame setY:([frame y] + 14)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 15)]
+    [frame setY:([frame y] + 15)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 16)]
+    [frame setY:([frame y] + 16)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 17)]
+    [frame setY:([frame y] + 17)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 18)]
+    [frame setY:([frame y] + 18)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 19)]
+    [frame setY:([frame y] + 19)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 20)]
+    [frame setY:([frame y] + 20)]
+    
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 21)]
+    [frame setY:([frame y] + 21)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 22)]
+    [frame setY:([frame y] + 22)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 23)]
+    [frame setY:([frame y] + 23)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 24)]
+    [frame setY:([frame y] + 24)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 25)]
+    [frame setY:([frame y] + 25)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 26)]
+    [frame setY:([frame y] + 26)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 27)]
+    [frame setY:([frame y] + 27)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 28)]
+    [frame setY:([frame y] + 28)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 29)]
+    [frame setY:([frame y] + 29)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 30)]
+    [frame setY:([frame y] + 30)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 31)]
+    [frame setY:([frame y] + 31)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 32)]
+    [frame setY:([frame y] + 32)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 33)]
+    [frame setY:([frame y] + 33)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 34)]
+    [frame setY:([frame y] + 34)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 35)]
+    [frame setY:([frame y] + 35)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 36)]
+    [frame setY:([frame y] + 36)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 37)]
+    [frame setY:([frame y] + 37)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 38)]
+    [frame setY:([frame y] + 38)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 39)]
+    [frame setY:([frame y] + 39)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 40)]
+    [frame setY:([frame y] + 40)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 41)]
+    [frame setY:([frame y] + 41)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 42)]
+    [frame setY:([frame y] + 42)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 43)]
+    [frame setY:([frame y] + 43)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 44)]
+    [frame setY:([frame y] + 44)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 45)]
+    [frame setY:([frame y] + 45)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 46)]
+    [frame setY:([frame y] + 46)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 47)]
+    [frame setY:([frame y] + 47)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 48)]
+    [frame setY:([frame y] + 48)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 49)]
+    [frame setY:([frame y] + 49)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 50)]
+    [frame setY:([frame y] + 50)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 51)]
+    [frame setY:([frame y] + 51)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 52)]
+    [frame setY:([frame y] + 52)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 53)]
+    [frame setY:([frame y] + 53)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 54)]
+    [frame setY:([frame y] + 54)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 55)]
+    [frame setY:([frame y] + 55)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 56)]
+    [frame setY:([frame y] + 56)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 57)]
+    [frame setY:([frame y] + 57)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 58)]
+    [frame setY:([frame y] + 58)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 59)]
+    [frame setY:([frame y] + 59)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 60)]
+    [frame setY:([frame y] + 60)]
+    
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 61)]
+    [frame setY:([frame y] + 61)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 62)]
+    [frame setY:([frame y] + 62)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 63)]
+    [frame setY:([frame y] + 63)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 64)]
+    [frame setY:([frame y] + 64)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 65)]
+    [frame setY:([frame y] + 65)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 66)]
+    [frame setY:([frame y] + 66)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 67)]
+    [frame setY:([frame y] + 67)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 68)]
+    [frame setY:([frame y] + 68)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 69)]
+    [frame setY:([frame y] + 69)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 70)]
+    [frame setY:([frame y] + 70)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 71)]
+    [frame setY:([frame y] + 71)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 72)]
+    [frame setY:([frame y] + 72)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 73)]
+    [frame setY:([frame y] + 73)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 74)]
+    [frame setY:([frame y] + 74)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 75)]
+    [frame setY:([frame y] + 75)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 76)]
+    [frame setY:([frame y] + 76)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 77)]
+    [frame setY:([frame y] + 77)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 78)]
+    [frame setY:([frame y] + 78)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 79)]
+    [frame setY:([frame y] + 79)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 80)]
+    [frame setY:([frame y] + 80)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 81)]
+    [frame setY:([frame y] + 81)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 82)]
+    [frame setY:([frame y] + 82)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 83)]
+    [frame setY:([frame y] + 83)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 84)]
+    [frame setY:([frame y] + 84)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 85)]
+    [frame setY:([frame y] + 85)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 86)]
+    [frame setY:([frame y] + 86)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 87)]
+    [frame setY:([frame y] + 87)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 88)]
+    [frame setY:([frame y] + 88)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 89)]
+    [frame setY:([frame y] + 89)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 90)]
+    [frame setY:([frame y] + 90)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 91)]
+    [frame setY:([frame y] + 91)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 92)]
+    [frame setY:([frame y] + 92)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 93)]
+    [frame setY:([frame y] + 93)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 94)]
+    [frame setY:([frame y] + 94)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 95)]
+    [frame setY:([frame y] + 95)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 96)]
+    [frame setY:([frame y] + 96)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 97)]
+    [frame setY:([frame y] + 97)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 98)]
+    [frame setY:([frame y] + 98)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 99)]
+    [frame setY:([frame y] + 99)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 100)]
+    [frame setY:([frame y] + 100)]
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 101)]
+    [frame setY:([frame y] + 101)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 102)]
+    [frame setY:([frame y] + 102)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 103)]
+    [frame setY:([frame y] + 103)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 104)]
+    [frame setY:([frame y] + 104)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 105)]
+    [frame setY:([frame y] + 105)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 106)]
+    [frame setY:([frame y] + 106)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 107)]
+    [frame setY:([frame y] + 107)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 108)]
+    [frame setY:([frame y] + 108)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 109)]
+    [frame setY:([frame y] + 109)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 110)]
+    [frame setY:([frame y] + 110)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 111)]
+    [frame setY:([frame y] + 111)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 112)]
+    [frame setY:([frame y] + 112)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 113)]
+    [frame setY:([frame y] + 113)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 114)]
+    [frame setY:([frame y] + 114)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 115)]
+    [frame setY:([frame y] + 115)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 116)]
+    [frame setY:([frame y] + 116)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 117)]
+    [frame setY:([frame y] + 117)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 118)]
+    [frame setY:([frame y] + 118)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 119)]
+    [frame setY:([frame y] + 119)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 120)]
+    [frame setY:([frame y] + 120)]
+
+
+    if (i==0) {
+      [copy select:true byExpandingSelection:false]
+    } else {
+      [copy select:true byExpandingSelection:true]
+    }
+  }
+}())

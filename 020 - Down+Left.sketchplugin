@@ -1,0 +1,151 @@
+// Long Shadow - 40 Down & Left
+(function() {
+  for(var i=0; i < [selection length]; i++){
+    
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 1)]
+    [frame setY:([frame y] + 1)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 2)]
+    [frame setY:([frame y] + 2)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 3)]
+    [frame setY:([frame y] + 3)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 4)]
+    [frame setY:([frame y] + 4)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 5)]
+    [frame setY:([frame y] + 5)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 6)]
+    [frame setY:([frame y] + 6)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 7)]
+    [frame setY:([frame y] + 7)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 8)]
+    [frame setY:([frame y] + 8)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 9)]
+    [frame setY:([frame y] + 9)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 10)]
+    [frame setY:([frame y] + 10)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 11)]
+    [frame setY:([frame y] + 11)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+
+    [frame setX:([frame x] - 12)]
+    [frame setY:([frame y] + 12)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 13)]
+    [frame setY:([frame y] + 13)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 14)]
+    [frame setY:([frame y] + 14)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 15)]
+    [frame setY:([frame y] + 15)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 16)]
+    [frame setY:([frame y] + 16)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 17)]
+    [frame setY:([frame y] + 17)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 18)]
+    [frame setY:([frame y] + 18)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 19)]
+    [frame setY:([frame y] + 19)]
+
+    var s = selection[i]
+    var copy = [s duplicate]
+    var frame = [copy frame]
+    
+    [frame setX:([frame x] - 20)]
+    [frame setY:([frame y] + 20)]
+
+    if (i==0) {
+      [copy select:true byExpandingSelection:false]
+    } else {
+      [copy select:true byExpandingSelection:true]
+    }
+  }
+}())
