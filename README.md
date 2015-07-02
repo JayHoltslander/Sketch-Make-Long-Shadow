@@ -1,3 +1,5 @@
+![Make Long Shadows Plugin for Sketch](splash.jpg)
+
 Sketch Make Long Shadow
 ==========================
 
