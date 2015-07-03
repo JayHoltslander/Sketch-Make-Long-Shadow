@@ -67,7 +67,7 @@ function run() {
 			unionAction = [[doc actionsController] actionWithName: "MSUnionAction"],
 			flattenAction = [[doc actionsController] actionWithName: "MSFlattenAction"],
 			groupAction = [[doc actionsController] actionWithName: "MSGroupAction"],
-			shadowColor = hexToMSColor("#000000", 0.8),
+			shadowColor = hexToMSColor("#000000", 0.3),
 			layer;
 
 		while (layer = [loop nextObject]) {
