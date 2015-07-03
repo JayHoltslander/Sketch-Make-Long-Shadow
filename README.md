@@ -12,7 +12,3 @@ Create long shadows quickly and easily.
 _Note: The plugin only supports Shape Layers. So to create long shadows for Text Layers, be sure to Convert Text to Outlines (`⌘` + `Shift` + `O`)._
 
 Big thanks to [Aby Nimbalkar] (https://github.com/abynim) for helping take this plugin to the next level.
-
-**Preview gif...**
-
-![Make Long Shadows Plugin for Sketch](preview.gif)
