@@ -53,6 +53,10 @@ function run() {
 	
 	if (response == "1000") {
 
+		// Disable nested undo groups so that UndoManager doesn't freak out
+
+		setUndoGroupingEnabled(false)
+
 		// Iterate through selected layers
 		
 		var loop = [selection objectEnumerator],
@@ -90,6 +94,7 @@ function run() {
 				for (i = 1; i < distance; i++) {
 					
 					if (duplicateLayer == nil) {
+						
 						duplicateLayer = [layer duplicate]
 						clearLayerStyles(duplicateLayer)
 	        			[duplicateLayer select:true byExpandingSelection:false]
@@ -158,7 +163,7 @@ function run() {
 				// Clean the shadow shape (remove extra path points)
 
 				if(![duplicateLayer canFlatten]) {
-					cleanShapePath([[[duplicateLayer layers] array] firstObject], 1.05)
+					cleanShapePath([[[duplicateLayer layers] array] firstObject], 1.2)
 				}
 
 				// Set shadow layer name and fill color
@@ -191,6 +196,10 @@ function run() {
 			duplicateLayer = nil
 
 		}
+
+		// Enable Undo grouping 
+
+		setUndoGroupingEnabled(true)
 
 		// Remember selected settings for next time
 

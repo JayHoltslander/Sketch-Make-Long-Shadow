@@ -51,6 +51,15 @@ var createDropDown = function(items, selectedItemIndex, width) {
 	return dropdownButton;
 }
 
+var setUndoGroupingEnabled = function(enabled) {
+	var undoManager = [[doc currentView] undoManager];
+    if(enabled) {
+        [undoManager enableUndoCoalescing];
+    } else {
+        [undoManager disableUndoCoalescing];
+    }
+}
+
 //--------------------------------------
 //  Shapes and Styles
 //--------------------------------------
