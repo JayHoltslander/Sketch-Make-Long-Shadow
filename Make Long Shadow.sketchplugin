@@ -53,10 +53,6 @@ function run() {
 	
 	if (response == "1000") {
 
-		// Disable nested undo groups so that UndoManager doesn't freak out
-
-		setUndoGroupingEnabled(false)
-
 		// Iterate through selected layers
 		
 		var loop = [selection objectEnumerator],
@@ -64,9 +60,9 @@ function run() {
 			direction = [directionDropdown titleOfSelectedItem],
 			xMultiplier = (direction == "Bottom Left" || direction == "Top Left") ? -1 : 1,
 			yMultiplier = (direction == "Top Left" || direction == "Top Right") ? -1 : 1,
-			unionAction = [[doc actionsController] actionWithName: "MSUnionAction"],
-			flattenAction = [[doc actionsController] actionWithName: "MSFlattenAction"],
-			groupAction = [[doc actionsController] actionWithName: "MSGroupAction"],
+			unionAction = [[doc actionsController] actionWithID: "MSUnionAction"],
+			flattenAction = [[doc actionsController] actionWithID: "MSFlattenAction"],
+			groupAction = [[doc actionsController] actionWithID: "MSGroupAction"],
 			shadowColor = hexToMSColor("#000000", 0.3),
 			layer;
 
@@ -125,7 +121,7 @@ function run() {
 		        			} else {
 
 								if ([flattenAction validate]) {
-									[flattenAction flattenIgnoringWarning]
+									[flattenAction flatten:nil];
 								}
 		        			}
 
@@ -151,7 +147,7 @@ function run() {
 				// Flatten the merged layer
 
 				if ([flattenAction validate]) {
-					[flattenAction flattenIgnoringWarning]
+					[flattenAction flatten:nil]
 				}
 
 				// Get newly created Shadow Layer
@@ -163,14 +159,14 @@ function run() {
 				// Clean the shadow shape (remove extra path points)
 
 				if(![duplicateLayer canFlatten]) {
-					cleanShapePath([[[duplicateLayer layers] array] firstObject], 1.2)
+					cleanShapePath([[duplicateLayer layers] firstObject], 1.2)
 				}
 
 				// Set shadow layer name and fill color
 
 				[duplicateLayer setName:[layer name] + " Shadow"]
 
-				[[[duplicateLayer style] fills] addNewStylePart];
+				[[duplicateLayer style] addStylePartOfType:0];
         		[[[duplicateLayer style] fill] setColor: shadowColor];
 
 				// Move artwork layer above shadow layer
@@ -196,10 +192,6 @@ function run() {
 			duplicateLayer = nil
 
 		}
-
-		// Enable Undo grouping 
-
-		setUndoGroupingEnabled(true)
 
 		// Remember selected settings for next time
 
