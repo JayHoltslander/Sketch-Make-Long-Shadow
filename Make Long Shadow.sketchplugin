@@ -53,10 +53,6 @@ function run() {
 	
 	if (response == "1000") {
 
-		// Disable nested undo groups so that UndoManager doesn't freak out
-
-		setUndoGroupingEnabled(false)
-
 		// Iterate through selected layers
 		
 		var loop = [selection objectEnumerator],
@@ -64,16 +60,26 @@ function run() {
 			direction = [directionDropdown titleOfSelectedItem],
 			xMultiplier = (direction == "Bottom Left" || direction == "Top Left") ? -1 : 1,
 			yMultiplier = (direction == "Top Left" || direction == "Top Right") ? -1 : 1,
-			unionAction = [[doc actionsController] actionWithName: "MSUnionAction"],
-			flattenAction = [[doc actionsController] actionWithName: "MSFlattenAction"],
-			groupAction = [[doc actionsController] actionWithName: "MSGroupAction"],
+			unionAction = [[doc actionsController] actionWithID: "MSUnionAction"],
+			flattenAction = [[doc actionsController] actionWithID: "MSFlattenAction"],
+			groupAction = [[doc actionsController] actionWithID: "MSGroupAction"],
 			shadowColor = hexToMSColor("#000000", 0.3),
-			layer;
+			layer, originalLayer, firstLayerIndex, isTextLayer;
 
-		while (layer = [loop nextObject]) {
+		while (originalLayer = [loop nextObject]) {
 			
 			// Only MSShapeGroups layers can be merged and flattened, 
 			// so run the following only on MSShapeGroup layers
+
+			isTextLayer = [originalLayer class] === MSTextLayer;
+
+			if (isTextLayer) {
+				layer = originalLayer.duplicate().layersByConvertingToOutlines().firstObject();
+				firstLayerIndex = 0;
+			} else {
+				layer = originalLayer;
+				firstLayerIndex = 1;
+			}
 
 			if ([layer class] === MSShapeGroup) {
 
@@ -91,7 +97,7 @@ function run() {
 
 				// Duplicate layer to make shadow
 				
-				for (i = 1; i < distance; i++) {
+				for (i = firstLayerIndex; i < distance; i++) {
 					
 					if (duplicateLayer == nil) {
 						
@@ -100,35 +106,8 @@ function run() {
 	        			[duplicateLayer select:true byExpandingSelection:false]
 
 	        			// Flatten the first duplicate layer so that we don't create unnecessary sub paths
-
-						if([duplicateLayer canFlatten]) {
-
-							if([flattenAction shouldWarnAboutFlattening]) {
-		        				
-								// Some shapes cannot be flattened (usually if their sub paths don't intersect)
-								// For those layers, we use the outline shape and ignore any Booleans
-
-								[parentGroup removeLayer:duplicateLayer]
-
-								var firstShape = [[layer layers] firstObject],
-									firstShapeFrame = [firstShape frame],
-									newShapePath = [MSShapePathLayer shapeWithShapePath:[firstShape path] inRect:[firstShapeFrame rect]];
-
-								duplicateLayer = [MSShapeGroup new];
-
-								[duplicateLayer addLayers:[newShapePath]]
-								[parentGroup removeLayer:duplicateLayer]
-								[parentGroup insertLayers:[duplicateLayer] afterLayer:layer]
-								[duplicateLayer resizeRoot:true]
-	        					[duplicateLayer select:true byExpandingSelection:false]
-
-		        			} else {
-
-								if ([flattenAction validate]) {
-									[flattenAction flattenIgnoringWarning]
-								}
-		        			}
-
+						if([duplicateLayer canFlatten] && [flattenAction validate]) {
+							[flattenAction flatten:nil];
 						}
 
 					} else {
@@ -151,7 +130,7 @@ function run() {
 				// Flatten the merged layer
 
 				if ([flattenAction validate]) {
-					[flattenAction flattenIgnoringWarning]
+					[flattenAction flatten:nil]
 				}
 
 				// Get newly created Shadow Layer
@@ -163,25 +142,25 @@ function run() {
 				// Clean the shadow shape (remove extra path points)
 
 				if(![duplicateLayer canFlatten]) {
-					cleanShapePath([[[duplicateLayer layers] array] firstObject], 1.2)
+					cleanShapePath([[duplicateLayer layers] firstObject], 1.2)
 				}
 
 				// Set shadow layer name and fill color
 
 				[duplicateLayer setName:[layer name] + " Shadow"]
 
-				[[[duplicateLayer style] fills] addNewStylePart];
+				[[duplicateLayer style] addStylePartOfType:0];
         		[[[duplicateLayer style] fill] setColor: shadowColor];
 
 				// Move artwork layer above shadow layer
 
-				[parentGroup removeLayer:layer]
-				[parentGroup insertLayers:[layer] afterLayer:duplicateLayer]
+				[parentGroup removeLayer:originalLayer]
+				[parentGroup insertLayers:[originalLayer] afterLayer:duplicateLayer]
 
 				// Group artwork and shadow so they can be moved together
 
 				[[doc currentPage] deselectAllLayers]
-				[layer select:true byExpandingSelection:true]
+				[originalLayer select:true byExpandingSelection:true]
 				[duplicateLayer select:true byExpandingSelection:true]
 
 				if ([groupAction validate]) {
@@ -193,13 +172,13 @@ function run() {
 
 			// Clean up
 
+			if (isTextLayer) {
+				layer.removeFromParent();
+			}
 			duplicateLayer = nil
 
 		}
 
-		// Enable Undo grouping 
-
-		setUndoGroupingEnabled(true)
 
 		// Remember selected settings for next time
 
