@@ -1,0 +1,27 @@
+{
+  "author" : "Jay Holtslander",
+  "commands" : [
+    {
+      "script" : "script.js",
+      "name" : "Make Long Shadow",
+      "handlers" : {
+        "run" : "onRun"
+      },
+      "identifier" : "makeShadow",
+      "description" : "Create long shadows quickly and easily.",
+      "icon" : "mls-icon.png"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "makeShadow"
+    ],
+    "isRoot" : true,
+    "title" : "Make Long Shadow"
+  },
+  "identifier" : "com.holtslander.jay.sketch-make-long-shadow",
+  "version" : "1.0",
+  "description" : "Create long shadows quickly and easily.",
+  "authorEmail" : "jay@holtslander.com",
+  "name" : "Make Long Shadow"
+}
