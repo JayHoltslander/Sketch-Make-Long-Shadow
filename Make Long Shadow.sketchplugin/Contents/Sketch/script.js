@@ -58,9 +58,9 @@ var onRun = function(context) {
 			direction = [directionDropdown titleOfSelectedItem],
 			xMultiplier = (direction == "Bottom Left" || direction == "Top Left") ? -1 : 1,
 			yMultiplier = (direction == "Top Left" || direction == "Top Right") ? -1 : 1,
-			unionAction = [[doc actionsController] actionWithID: "MSUnionAction"],
-			flattenAction = [[doc actionsController] actionWithID: "MSFlattenAction"],
-			groupAction = [[doc actionsController] actionWithID: "MSGroupAction"],
+			unionAction = [[doc actionsController] actionForID: "MSUnionAction"],
+			flattenAction = [[doc actionsController] actionForID: "MSFlattenAction"],
+			groupAction = [[doc actionsController] actionForID: "MSGroupAction"],
 			shadowColor = hexToMSColor("#000000", 0.3),
 			layer, originalLayer, firstLayerIndex, isTextLayer;
 
