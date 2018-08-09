@@ -3,7 +3,6 @@
 ![Make Long Shadows Plugin for Sketch](splash.jpg)
 
 # Sketch Make Long Shadow
-==========================
 Create long shadows from shapes and text layers quickly and easily.
 
 ## How to use
